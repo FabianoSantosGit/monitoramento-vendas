@@ -10,3 +10,9 @@ cat("Quantidade de vendedores que atingiram a meta:", quantos_atingiram_meta, "\
 # Substitui qualquer valor de vendas inferior a 15 por 15
 vendas_ajustadas <- ifelse(vendas < 15, 15, vendas)
 cat("Vendas ajustadas:", vendas_ajustadas, "\n")
+# Gerar um relatório de desempenho
+cat("Relatório de Desempenho:\n")
+for (i in 1:length(vendas)) {
+  status_meta <- ifelse(atingiram_meta[i], "Atingiu a meta", "Não atingiu a meta")
+  cat(  vendas_ajustadas[i], "-", status_meta, "\n")
+}
