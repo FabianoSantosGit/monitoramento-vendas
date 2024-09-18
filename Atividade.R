@@ -7,3 +7,6 @@ atingiram_meta <- vendas >= meta_minima
 # Calcula quantos vendedores atingiram a meta
 quantos_atingiram_meta <- sum(atingiram_meta)
 cat("Quantidade de vendedores que atingiram a meta:", quantos_atingiram_meta, "\n")
+# Substitui qualquer valor de vendas inferior a 15 por 15
+vendas_ajustadas <- ifelse(vendas < 15, 15, vendas)
+cat("Vendas ajustadas:", vendas_ajustadas, "\n")
